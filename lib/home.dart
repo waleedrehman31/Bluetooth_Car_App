@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'dart:html';
-
 import 'package:arduino_blue_car/about.dart';
 import 'package:flutter/material.dart';
+
+import 'DiscoveryPage.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key, required this.title}) : super(key: key);
@@ -32,13 +33,14 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
             ),
-           
             ListTile(
               leading: Icon(Icons.device_hub),
               title: Text('Connect Device'),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DiscoveryPage()),
+                );
               },
             ),
             ListTile(

@@ -75,7 +75,7 @@ class _AboutState extends State<About> {
                         height: 250,
                       ),
                       Text(
-                        'Adeel',
+                        'Adeel Sheikh',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -86,7 +86,7 @@ class _AboutState extends State<About> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const <Widget>[
                           Text(
-                            "57110-F19",
+                            "57124-F19",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
@@ -107,7 +107,7 @@ class _AboutState extends State<About> {
                         height: 250,
                       ),
                       Text(
-                        'Hamza',
+                        'Hamza Jamil',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -118,7 +118,7 @@ class _AboutState extends State<About> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const <Widget>[
                           Text(
-                            "57110-F19",
+                            "57173-F19",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
@@ -139,7 +139,7 @@ class _AboutState extends State<About> {
                         height: 250,
                       ),
                       Text(
-                        'Sohail',
+                        'Sohail Ahmad',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -150,7 +150,7 @@ class _AboutState extends State<About> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const <Widget>[
                           Text(
-                            "57110-F19",
+                            "57131-F19",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
@@ -171,7 +171,7 @@ class _AboutState extends State<About> {
                         height: 250,
                       ),
                       Text(
-                        'Abdul Mohiz',
+                        'Abdul Mohiz Lodhi',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -182,7 +182,7 @@ class _AboutState extends State<About> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const <Widget>[
                           Text(
-                            "57110-F19",
+                            "57178-F19",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
