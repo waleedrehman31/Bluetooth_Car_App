@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'dart:html';
 
@@ -32,17 +32,10 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: 40, color: Colors.white),
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.control_camera),
-              title: Text('Controller'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
+           
             ListTile(
               leading: Icon(Icons.device_hub),
-              title: Text('Connect Devices'),
+              title: Text('Connect Device'),
               onTap: () {
                 // Update the state of the app.
                 // ...
@@ -64,8 +57,100 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: const <Widget>[Text("Hello")],
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.all(15),
+          padding: EdgeInsets.all(15),
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Car Controls",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Note: First connect car using bluetooth ",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.red,
+                  ),
+                ),
+                SizedBox(
+                  height: 350,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Card(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          ElevatedButton(
+                            onPressed: () => {},
+                            child: Icon(
+                              Icons.arrow_upward,
+                              size: 50,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () => {},
+                                child: Icon(
+                                  Icons.arrow_back_sharp,
+                                  size: 50,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 100,
+                              ),
+                              ElevatedButton(
+                                onPressed: () => {},
+                                child: Icon(
+                                  Icons.arrow_forward_sharp,
+                                  size: 50,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
+                            onPressed: () => {},
+                            child: Icon(
+                              Icons.arrow_downward,
+                              size: 50,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
