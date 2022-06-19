@@ -336,10 +336,15 @@ class _BluetoothAppState extends State<BluetoothApp> {
                           height: 10,
                         ),
                         ElevatedButton(
-                          onPressed: () {
+                          onLongPress: () {
                             if (_connected) {
                               _sendOnMessageToBluetooth("F");
                             }
+                          },
+                          onPressed: () {
+                            // if (_connected) {
+                            //   _sendOnMessageToBluetooth("F");
+                            // }
                           },
                           child: Icon(
                             Icons.arrow_upward,
@@ -354,10 +359,15 @@ class _BluetoothAppState extends State<BluetoothApp> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             ElevatedButton(
-                              onPressed: () {
+                              onLongPress: () {
                                 if (_connected) {
                                   _sendOnMessageToBluetooth("L");
                                 }
+                              },
+                              onPressed: () {
+                                // if (_connected) {
+                                //   _sendOnMessageToBluetooth("L");
+                                // }
                               },
                               child: const Icon(
                                 Icons.arrow_back_sharp,
@@ -375,8 +385,8 @@ class _BluetoothAppState extends State<BluetoothApp> {
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  vertical: 18.0,
-                                  horizontal: 4.0,
+                                  vertical: 17.0,
+                                  horizontal: 5.0,
                                 ),
                                 child: Text(
                                   "STOP",
@@ -391,10 +401,15 @@ class _BluetoothAppState extends State<BluetoothApp> {
                               width: 20,
                             ),
                             ElevatedButton(
-                              onPressed: () {
+                              onLongPress: () {
                                 if (_connected) {
                                   _sendOnMessageToBluetooth("R");
                                 }
+                              },
+                              onPressed: () {
+                                // if (_connected) {
+                                //   _sendOnMessageToBluetooth("R");
+                                // }
                               },
                               child: Icon(
                                 Icons.arrow_forward_sharp,
@@ -407,10 +422,15 @@ class _BluetoothAppState extends State<BluetoothApp> {
                           height: 20,
                         ),
                         ElevatedButton(
-                          onPressed: () {
+                          onLongPress: () {
                             if (_connected) {
                               _sendOnMessageToBluetooth("B");
                             }
+                          },
+                          onPressed: () {
+                            // if (_connected) {
+                            //   _sendOnMessageToBluetooth("B");
+                            // }
                           },
                           child: Icon(
                             Icons.arrow_downward,

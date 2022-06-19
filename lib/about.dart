@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -35,34 +36,41 @@ class _AboutState extends State<About> {
                 SizedBox(
                   height: 10,
                 ),
+                Divider(),
                 Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.lightBlueAccent.withOpacity(0.5),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/Naveed.jpeg"),
-                          radius: 180,
+                          radius: 150,
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                         Text(
                           'Naveed ur Rehman',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                             fontSize: 25,
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget>[
-                            Text(
-                              "57110-F19",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "57110-F19",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -71,34 +79,41 @@ class _AboutState extends State<About> {
                 SizedBox(
                   height: 5,
                 ),
+                Divider(),
                 Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.lightBlueAccent.withOpacity(0.5),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/Adeel.jpeg"),
-                          radius: 180,
+                          radius: 150,
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                         Text(
                           'Adeel Sheikh',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                             fontSize: 25,
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget>[
-                            Text(
-                              "57124-F19",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "57124-F19",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -107,34 +122,41 @@ class _AboutState extends State<About> {
                 SizedBox(
                   height: 5,
                 ),
+                Divider(),
                 Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.lightBlueAccent.withOpacity(0.5),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/Hamza.jpeg"),
-                          radius: 180,
+                          radius: 150,
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                         Text(
                           'Hamza Jamil',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                             fontSize: 25,
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget>[
-                            Text(
-                              "57173-F19",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "57173-F19",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -143,34 +165,41 @@ class _AboutState extends State<About> {
                 SizedBox(
                   height: 5,
                 ),
+                Divider(),
                 Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.lightBlueAccent.withOpacity(0.5),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/Sohail.jpeg"),
-                          radius: 180,
+                          radius: 150,
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                         Text(
                           'Sohail Ahmad',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                             fontSize: 25,
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget>[
-                            Text(
-                              "57131-F19",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "57131-F19",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -179,34 +208,41 @@ class _AboutState extends State<About> {
                 SizedBox(
                   height: 5,
                 ),
+                Divider(),
                 Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.lightBlueAccent.withOpacity(0.5),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/Moiz.jpeg"),
-                          radius: 180,
+                          radius: 150,
+                        ),
+                        SizedBox(
+                          height: 20,
                         ),
                         Text(
                           'Abdul Mohiz Lodhi',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                             fontSize: 25,
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget>[
-                            Text(
-                              "57178-F19",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "57178-F19",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
