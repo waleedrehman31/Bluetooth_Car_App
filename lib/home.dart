@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:arduino_blue_car/Blue/bluetooth.dart';
 import 'package:arduino_blue_car/about.dart';
-import 'package:arduino_blue_car/deviceLists.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
               ),
               child: Text(
                 'BLUETOOTH CAR CONTROLLER APP',
-                style: TextStyle(fontSize: 40, color: Colors.white),
+                style: TextStyle(fontSize: 35, color: Colors.white),
               ),
             ),
             ListTile(
@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DeviceLists()),
+                  MaterialPageRoute(builder: (context) => BluetoothApp()),
                 );
               },
             ),
@@ -76,13 +76,6 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: 10,
                 ),
-                Text(
-                  "Note: First connect car using bluetooth ",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.red,
-                  ),
-                ),
                 SizedBox(
                   height: 350,
                 ),
@@ -90,59 +83,20 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Card(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 10,
-                          ),
-                          ElevatedButton(
-                            onPressed: () => {},
-                            child: Icon(
-                              Icons.arrow_upward,
-                              size: 50,
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Card(
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 10,
                             ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              ElevatedButton(
-                                onPressed: () => {},
-                                child: Icon(
-                                  Icons.arrow_back_sharp,
-                                  size: 50,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 100,
-                              ),
-                              ElevatedButton(
-                                onPressed: () => {},
-                                child: Icon(
-                                  Icons.arrow_forward_sharp,
-                                  size: 50,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          ElevatedButton(
-                            onPressed: () => {},
-                            child: Icon(
-                              Icons.arrow_downward,
-                              size: 50,
+                            
+                            SizedBox(
+                              height: 10,
                             ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],

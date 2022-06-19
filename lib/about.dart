@@ -36,160 +36,180 @@ class _AboutState extends State<About> {
                   height: 10,
                 ),
                 Card(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "images/Naveed.jpeg",
-                        height: 250,
-                      ),
-                      Text(
-                        'Naveed ur Rehman',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/Naveed.jpeg"),
+                          radius: 180,
                         ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const <Widget>[
-                          Text(
-                            "57110-F19",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Text(
+                          'Naveed ur Rehman',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const <Widget>[
+                            Text(
+                              "57110-F19",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Card(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "images/Adeel.jpeg",
-                        height: 250,
-                      ),
-                      Text(
-                        'Adeel Sheikh',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/Adeel.jpeg"),
+                          radius: 180,
                         ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const <Widget>[
-                          Text(
-                            "57124-F19",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Text(
+                          'Adeel Sheikh',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const <Widget>[
+                            Text(
+                              "57124-F19",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Card(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "images/Hamza.jpeg",
-                        height: 250,
-                      ),
-                      Text(
-                        'Hamza Jamil',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/Hamza.jpeg"),
+                          radius: 180,
                         ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const <Widget>[
-                          Text(
-                            "57173-F19",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Text(
+                          'Hamza Jamil',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const <Widget>[
+                            Text(
+                              "57173-F19",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Card(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "images/Sohail.jpeg",
-                        height: 250,
-                      ),
-                      Text(
-                        'Sohail Ahmad',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/Sohail.jpeg"),
+                          radius: 180,
                         ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const <Widget>[
-                          Text(
-                            "57131-F19",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Text(
+                          'Sohail Ahmad',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const <Widget>[
+                            Text(
+                              "57131-F19",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Card(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "images/Moiz.jpeg",
-                        height: 250,
-                      ),
-                      Text(
-                        'Abdul Mohiz Lodhi',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/Moiz.jpeg"),
+                          radius: 180,
                         ),
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const <Widget>[
-                          Text(
-                            "57178-F19",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Text(
+                          'Abdul Mohiz Lodhi',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const <Widget>[
+                            Text(
+                              "57178-F19",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
