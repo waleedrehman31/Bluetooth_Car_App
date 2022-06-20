@@ -9,13 +9,12 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+  static Color mainColor = Color.fromRGBO(18, 18, 18, 1);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Bluetooth Car Controller',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark(),
       home: const Home(title: 'Arduino Bluetooth Car Controller'),
     );
   }

@@ -11,6 +11,8 @@ class About extends StatefulWidget {
 }
 
 class _AboutState extends State<About> {
+  static Color mainColor = Color.fromRGBO(18, 18, 18, 1);
+  static Color cardColor = Color.fromRGBO(31, 26, 36, 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,7 @@ class _AboutState extends State<About> {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(
@@ -41,7 +43,7 @@ class _AboutState extends State<About> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  color: Colors.lightBlueAccent.withOpacity(0.5),
+                  color: mainColor,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -84,14 +86,14 @@ class _AboutState extends State<About> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  color: Colors.lightBlueAccent.withOpacity(0.5),
+                  color: mainColor,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
-                              AssetImage("assets/images/Adeel.jpeg"),
+                              AssetImage("assets/images/Adeel2.jpeg"),
                           radius: 150,
                         ),
                         SizedBox(
@@ -127,14 +129,14 @@ class _AboutState extends State<About> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  color: Colors.lightBlueAccent.withOpacity(0.5),
+                  color: mainColor,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
-                              AssetImage("assets/images/Hamza.jpeg"),
+                              AssetImage("assets/images/Hamza2.jpeg"),
                           radius: 150,
                         ),
                         SizedBox(
@@ -170,14 +172,14 @@ class _AboutState extends State<About> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  color: Colors.lightBlueAccent.withOpacity(0.5),
+                  color: mainColor,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
                           backgroundImage:
-                              AssetImage("assets/images/Sohail.jpeg"),
+                              AssetImage("assets/images/Sohail2.jpeg"),
                           radius: 150,
                         ),
                         SizedBox(
@@ -213,14 +215,16 @@ class _AboutState extends State<About> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  color: Colors.lightBlueAccent.withOpacity(0.5),
+                  color: mainColor,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         CircleAvatar(
-                          backgroundImage:
-                              AssetImage("assets/images/Moiz.jpeg"),
+                          backgroundImage: AssetImage(
+                            "assets/images/Moiz2.jpeg",
+                          ),
+                          
                           radius: 150,
                         ),
                         SizedBox(

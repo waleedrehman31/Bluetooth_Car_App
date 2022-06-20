@@ -11,11 +11,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
 class BluetoothApp extends StatefulWidget {
+  const BluetoothApp({Key? key}) : super(key: key);
+
   @override
   _BluetoothAppState createState() => _BluetoothAppState();
 }
 
 class _BluetoothAppState extends State<BluetoothApp> {
+  static Color mainColor = Color.fromRGBO(18, 18, 18, 1);
+  static Color cardColor = Color.fromRGBO(31, 26, 36, 1);
   // Initializing the Bluetooth connection state to be unknown
   BluetoothState _bluetoothState = BluetoothState.UNKNOWN;
   // Initializing a global key, as it would help us in showing a SnackBar later
@@ -139,7 +143,6 @@ class _BluetoothAppState extends State<BluetoothApp> {
       key: _scaffoldKey,
       appBar: AppBar(
         title: const Text("Connect Car and Drive"),
-        backgroundColor: Colors.blue,
         actions: <Widget>[
           FlatButton.icon(
             icon: const Icon(
@@ -155,7 +158,7 @@ class _BluetoothAppState extends State<BluetoothApp> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
-            splashColor: Colors.deepPurple,
+            splashColor: Colors.blue,
             onPressed: () async {
               // So, that when new devices are paired
               // while the app is running, user can refresh
@@ -188,7 +191,7 @@ class _BluetoothAppState extends State<BluetoothApp> {
                     child: Text(
                       'Enable Bluetooth',
                       style: const TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
                         fontSize: 16,
                       ),
                     ),
@@ -220,17 +223,34 @@ class _BluetoothAppState extends State<BluetoothApp> {
                 ],
               ),
             ),
+            Divider(),
             Stack(
               children: <Widget>[
                 Column(
                   children: <Widget>[
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(top: 10),
-                      child: Text(
-                        "PAIRED DEVICES",
-                        style:
-                            const TextStyle(fontSize: 24, color: Colors.blue),
-                        textAlign: TextAlign.center,
+                      child: Center(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          // ignore: prefer_const_literals_to_create_immutables
+                          children: [
+                            Icon(
+                              Icons.devices,
+                              size: 40,
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Text(
+                              "PAIRED DEVICES",
+                              style: const TextStyle(
+                                  fontSize: 30, color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
@@ -251,68 +271,24 @@ class _BluetoothAppState extends State<BluetoothApp> {
                             value: _devicesList.isNotEmpty ? _device : null,
                           ),
                           RaisedButton(
+                            color: mainColor,
                             onPressed: _isButtonUnavailable
                                 ? null
                                 : _connected
                                     ? _disconnect
                                     : _connect,
-                            child: Text(_connected ? 'Disconnect' : 'Connect'),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                _connected ? 'Disconnect' : 'Connect',
+                                style: TextStyle(fontSize: 14),
+                              ),
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    // Padding(
-                    //   padding: const EdgeInsets.all(16.0),
-                    //   child: Card(
-                    //     shape: RoundedRectangleBorder(
-                    //       side: new BorderSide(
-                    //         color: Colors.white,
-                    //         // _deviceState == 0
-                    //         //     ? colors['neutralBorderColor']
-                    //         //     : _deviceState == 1
-                    //         //         ? colors['onBorderColor']
-                    //         //         : colors['offBorderColor'],
-                    //         width: 3,
-                    //       ),
-                    //       borderRadius: BorderRadius.circular(4.0),
-                    //     ),
-                    //     elevation: _deviceState == 0 ? 4 : 0,
-                    //     child: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Row(
-                    //         children: <Widget>[
-                    //           Expanded(
-                    //             child: Text(
-                    //               "DEVICE 1",
-                    //               style: TextStyle(
-                    //                 fontSize: 20,
-                    //                 color: _deviceState == 0
-                    //                     ? colors['neutralTextColor']
-                    //                     : _deviceState == 1
-                    //                         ? colors['onTextColor']
-                    //                         : colors['offTextColor'],
-                    //               ),
-                    //             ),
-                    //           ),
-                    //           FlatButton(
-                    //             onPressed: () {
-                    //               if (_connected) {
-                    //                 _sendOnMessageToBluetooth("F");
-                    //               }
-                    //             },
-                    //             child: const Text("ON"),
-                    //           ),
-                    //           FlatButton(
-                    //             onPressed: _connected
-                    //                 ? _sendOffMessageToBluetooth
-                    //                 : null,
-                    //             child: const Text("OFF"),
-                    //           ),
-                    //         ],
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
+                    Divider(),
                   ],
                 ),
                 Container(
@@ -321,7 +297,34 @@ class _BluetoothAppState extends State<BluetoothApp> {
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 20,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 5),
+              child: Center(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    Icon(
+                      Icons.drive_eta,
+                      size: 40,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "CAR CONTROLLER",
+                      style: const TextStyle(fontSize: 30, color: Colors.white),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -358,20 +361,27 @@ class _BluetoothAppState extends State<BluetoothApp> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            ElevatedButton(
+                            GestureDetector(
                               onLongPress: () {
                                 if (_connected) {
                                   _sendOnMessageToBluetooth("L");
                                 }
                               },
-                              onPressed: () {
-                                // if (_connected) {
-                                //   _sendOnMessageToBluetooth("L");
-                                // }
+                              onLongPressEnd: () {
+                                if (_connected) {
+                                  _sendOnMessageToBluetooth("S");
+                                }
                               },
-                              child: const Icon(
-                                Icons.arrow_back_sharp,
-                                size: 50,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // if (_connected) {
+                                  //   _sendOnMessageToBluetooth("L");
+                                  // }
+                                },
+                                child: const Icon(
+                                  Icons.arrow_back_sharp,
+                                  size: 50,
+                                ),
                               ),
                             ),
                             SizedBox(
@@ -385,13 +395,13 @@ class _BluetoothAppState extends State<BluetoothApp> {
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  vertical: 17.0,
-                                  horizontal: 5.0,
+                                  vertical: 15.0,
+                                  horizontal: 3.0,
                                 ),
                                 child: Text(
                                   "STOP",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -446,9 +456,10 @@ class _BluetoothAppState extends State<BluetoothApp> {
                 ),
               ],
             ),
+            Divider(),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(8),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -456,15 +467,22 @@ class _BluetoothAppState extends State<BluetoothApp> {
                       const Text(
                         "NOTE: If you cannot find the device in the list, please pair the device by going to the bluetooth settings",
                         style: const TextStyle(
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                           color: Colors.red,
                         ),
                       ),
-                      const SizedBox(height: 15),
+                      const SizedBox(height: 8),
                       RaisedButton(
+                        color: mainColor,
                         elevation: 2,
-                        child: const Text("Bluetooth Settings"),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Bluetooth Settings",
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ),
                         onPressed: () {
                           FlutterBluetoothSerial.instance.openSettings();
                         },
